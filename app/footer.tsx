@@ -67,7 +67,7 @@ function ThemeSwitch() {
 
 export function Footer() {
   return (
-    <footer className="mt-8 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
+    <footer className="mt-auto border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
         <ThemeSwitch />
     </footer>
   )

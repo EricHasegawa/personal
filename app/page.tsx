@@ -65,7 +65,8 @@ function MagneticSocialLink({
 export default function Personal() {
   return (
     <motion.main
-      className="space-y-8"
+    className="flex flex-1 flex-col min-h-[inherit] gap-18" 
+
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
@@ -74,7 +75,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-          <p className="text-zinc-600 dark:text-zinc-400 text-xs">
+          <p className="text-zinc-600 dark:text-zinc-400">
             I'm a founder and engineer currently working at Stripe in New York City.
             Previously, I was a founding engineer at
             {' '}
@@ -138,6 +139,7 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        className="mt-auto mb-8"
       >
         <h3 className="mb-5 font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
