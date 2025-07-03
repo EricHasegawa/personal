@@ -12,16 +12,10 @@ type SocialLink = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-  },
-  {
-    title: 'How to Export Metadata from MDX for Next.js SEO',
-    description: 'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
-    link: '/blog/example-mdx-metadata',
-    uid: 'blog-4',
+    title: '10,000 Hours of Programming in the era of AI',
+    description: 'Opinions I\'ve developed in writing lots of code over the past 3 or 4 years.',
+    link: '/writing/10k-hours',
+    uid: '73aa6c72-7705-445a-a62a-e408b64e18c8',
   },
 ]
 

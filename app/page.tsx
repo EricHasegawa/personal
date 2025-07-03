@@ -104,7 +104,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 font-medium">Blog</h3>
+        <h3 className="mb-3 font-medium">Writing</h3>
         <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
