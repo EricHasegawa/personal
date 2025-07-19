@@ -7,7 +7,8 @@ import {
   BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
-} from './data'
+} from '@/app/data'
+import { EmailSignup } from '@/components/ui/email-signup'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -133,6 +134,9 @@ export default function Personal() {
               </Link>
             ))}
           </AnimatedBackground>
+        </div>
+        <div className='mt-4'>
+          <EmailSignup />
         </div>
       </motion.section>
 
