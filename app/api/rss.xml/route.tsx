@@ -11,7 +11,7 @@ const buildRSSFeed = () => {
       <description>${description}</description>
       <pubDate>${pubDate}</pubDate>
       <guid>${uid}</guid>
-    </item>`
+    </item>`,
     )
     .join('');
 

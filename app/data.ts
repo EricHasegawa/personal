@@ -21,7 +21,7 @@ export const BLOG_POSTS: BlogPost[] = [
     pubDate: new Date('2025-07-04').toUTCString(),
     uid: '73aa6c72-7705-445a-a62a-e408b64e18c8',
   },
-]
+];
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
@@ -36,6 +36,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'Instagram',
     link: 'https://www.instagram.com/erichasegawa',
   },
-]
+];
 
-export const EMAIL = 'erichasegawa1@gmail.com'
+export const EMAIL = 'erichasegawa1@gmail.com';

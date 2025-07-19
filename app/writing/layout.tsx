@@ -1,4 +1,4 @@
-import { ScrollProgress } from '@/components/ui/scroll-progress'
+import { ScrollProgress } from '@/components/ui/scroll-progress';
 
 export default function LayoutBlogPost({
   children,
@@ -19,5 +19,5 @@ export default function LayoutBlogPost({
         {children}
       </main>
     </>
-  )
+  );
 }

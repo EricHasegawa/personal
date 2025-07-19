@@ -1,4 +1,3 @@
-import { sub } from 'motion/react-client';
 import React from 'react';
 
 interface ArticleHeaderProps {
@@ -7,17 +6,17 @@ interface ArticleHeaderProps {
 }
 
 export const ArticleHeader = ({
-    title,
-    publishedDate,
-    }: ArticleHeaderProps) => {
-    return (
-        <header>
-            <h1>
-                {title}
-            </h1>
-            <p className="text-sm -mt-4 italic">
-                {publishedDate}
-            </p>
-        </header>
-    );
-    }
+  title,
+  publishedDate,
+}: ArticleHeaderProps) => {
+  return (
+    <header>
+      <h1>
+        {title}
+      </h1>
+      <p className="text-sm -mt-4 italic">
+        {publishedDate}
+      </p>
+    </header>
+  );
+};

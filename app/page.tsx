@@ -1,14 +1,14 @@
-'use client'
-import { motion } from 'motion/react'
-import { Magnetic } from '@/components/ui/magnetic'
-import Link from 'next/link'
-import { AnimatedBackground } from '@/components/ui/animated-background'
+'use client';
+import { motion } from 'motion/react';
+import { Magnetic } from '@/components/ui/magnetic';
+import Link from 'next/link';
+import { AnimatedBackground } from '@/components/ui/animated-background';
 import {
   BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
-} from '@/app/data'
-import { EmailSignup } from '@/components/ui/email-signup'
+} from '@/app/data';
+import { EmailSignup } from '@/components/ui/email-signup';
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -18,16 +18,16 @@ const VARIANTS_CONTAINER = {
       staggerChildren: 0.15,
     },
   },
-}
+};
 
 const VARIANTS_SECTION = {
   hidden: { opacity: 0, y: 20, filter: 'blur(8px)' },
   visible: { opacity: 1, y: 0, filter: 'blur(0px)' },
-}
+};
 
 const TRANSITION_SECTION = {
   duration: 0.3,
-}
+};
 
 function MagneticSocialLink({
   children,
@@ -60,13 +60,13 @@ function MagneticSocialLink({
         </svg>
       </a>
     </Magnetic>
-  )
+  );
 }
 
 export default function Personal() {
   return (
     <motion.main
-    className="flex flex-1 flex-col min-h-[inherit] gap-18" 
+      className="flex flex-1 flex-col min-h-[inherit] gap-18"
 
       variants={VARIANTS_CONTAINER}
       initial="hidden"
@@ -76,29 +76,29 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-          <p className="text-zinc-600 dark:text-zinc-400">
-            I'm a founder and engineer currently working at Stripe in New York City.
+        <p className="text-zinc-600 dark:text-zinc-400">
+            I&apos;m a founder and engineer currently working at Stripe in New York City.
             Previously, I was a founding engineer at
-            {' '}
-            <Link
-              href="https://streamlineclimate.com/"
-              className="underline dark:text-zinc-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          {' '}
+          <Link
+            href="https://streamlineclimate.com/"
+            className="underline dark:text-zinc-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
               Streamline Climate
-            </Link>, and prior to that I co-founded
-            {' '}
-            <Link
-              href="https://www.linkedin.com/company/68071523/"
-              className="underline dark:text-zinc-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          </Link>, and prior to that I co-founded
+          {' '}
+          <Link
+            href="https://www.linkedin.com/company/68071523/"
+            className="underline dark:text-zinc-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
               Sanctuary
-            </Link>, a data platform for the sneaker industry that was acquired in 2024.
+          </Link>, a data platform for the sneaker industry that was acquired in 2024.
 
-          </p>
+        </p>
       </motion.section>
 
       <motion.section
@@ -161,5 +161,5 @@ export default function Personal() {
         </div>
       </motion.section>
     </motion.main>
-  )
+  );
 }

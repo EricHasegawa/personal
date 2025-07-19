@@ -1,6 +1,6 @@
-'use client'
-import { cn } from '@/lib/utils'
-import { AnimatePresence, Transition, motion } from 'motion/react'
+'use client';
+import { cn } from '@/lib/utils';
+import { AnimatePresence, Transition, motion } from 'motion/react';
 import {
   Children,
   cloneElement,
@@ -8,7 +8,7 @@ import {
   useEffect,
   useState,
   useId,
-} from 'react'
+} from 'react';
 
 export type AnimatedBackgroundProps = {
   children:
@@ -29,34 +29,35 @@ export function AnimatedBackground({
   transition,
   enableHover = false,
 }: AnimatedBackgroundProps) {
-  const [activeId, setActiveId] = useState<string | null>(null)
-  const uniqueId = useId()
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const uniqueId = useId();
 
   const handleSetActiveId = (id: string | null) => {
-    setActiveId(id)
+    setActiveId(id);
 
     if (onValueChange) {
-      onValueChange(id)
+      onValueChange(id);
     }
-  }
+  };
 
   useEffect(() => {
     if (defaultValue !== undefined) {
-      setActiveId(defaultValue)
+      setActiveId(defaultValue);
     }
-  }, [defaultValue])
+  }, [defaultValue]);
 
-  return Children.map(children, (child: any, index) => {
-    const id = child.props['data-id']
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return Children.map(children, (child: React.ReactElement<any>, index) => {
+    const id = child.props['data-id'];
 
     const interactionProps = enableHover
       ? {
-          onMouseEnter: () => handleSetActiveId(id),
-          onMouseLeave: () => handleSetActiveId(null),
-        }
+        onMouseEnter: () => handleSetActiveId(id),
+        onMouseLeave: () => handleSetActiveId(null),
+      }
       : {
-          onClick: () => handleSetActiveId(id),
-        }
+        onClick: () => handleSetActiveId(id),
+      };
 
     return cloneElement(
       child,
@@ -85,6 +86,6 @@ export function AnimatedBackground({
         </AnimatePresence>
         <div className="z-10">{child.props.children}</div>
       </>,
-    )
-  })
+    );
+  });
 }

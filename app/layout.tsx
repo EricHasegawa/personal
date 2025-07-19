@@ -1,15 +1,15 @@
-import type { Metadata, Viewport } from 'next'
-import { JetBrains_Mono } from 'next/font/google'
-import './globals.css'
-import { Header } from './header'
-import { Footer } from './footer'
-import { ThemeProvider } from 'next-themes'
+import type { Metadata, Viewport } from 'next';
+import { JetBrains_Mono } from 'next/font/google';
+import './globals.css';
+import { Header } from './header';
+import { Footer } from './footer';
+import { ThemeProvider } from 'next-themes';
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   themeColor: '#ffffff',
-}
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nim-fawn.vercel.app/'),
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   },
   description:
     'Rootfn is Eric Hasegawa\'s personal website.',
-}
+};
 
 const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
   subsets: ['latin'],
   display: 'swap',
-})
+});
 
 export default function RootLayout({
   children,
@@ -37,17 +37,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-        <head>
-          <link
-            rel="alternate"
-            type="application/rss+xml"
-            title="Root Fn RSS Feed"
-            href="api/rss.xml"
-          />
-        </head>
-        <body
-          className={`${jetbrainsMono.variable} font-[family-name:var(--font-jetbrains-mono)] bg-white tracking-tight antialiased dark:bg-zinc-950`}
-        >
+      <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Root Fn RSS Feed"
+          href="api/rss.xml"
+        />
+      </head>
+      <body
+        className={`${jetbrainsMono.variable} font-[family-name:var(--font-jetbrains-mono)] bg-white tracking-tight antialiased dark:bg-zinc-950`}
+      >
         <ThemeProvider
           enableSystem={true}
           attribute="class"
@@ -64,5 +64,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
