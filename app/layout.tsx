@@ -37,6 +37,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+        <head>
+          <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Root Fn RSS Feed"
+            href="api/rss.xml"
+          />
+        </head>
         <body
           className={`${jetbrainsMono.variable} font-[family-name:var(--font-jetbrains-mono)] bg-white tracking-tight antialiased dark:bg-zinc-950`}
         >

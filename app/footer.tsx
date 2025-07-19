@@ -1,6 +1,6 @@
 'use client'
 import { AnimatedBackground } from '@/components/ui/animated-background'
-import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
+import { MonitorIcon, MoonIcon, SunIcon, RssIcon } from 'lucide-react' // import RssIcon
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
@@ -50,15 +50,15 @@ function ThemeSwitch() {
     >
       {THEMES_OPTIONS.map((theme) => {
         return (
-          <button
-            key={theme.id}
-            className="inline-flex h-7 w-7 items-center justify-center text-zinc-500 transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50 cursor-pointer"
-            type="button"
-            aria-label={`Switch to ${theme.label} theme`}
-            data-id={theme.id}
-          >
-            {theme.icon}
-          </button>
+        <button
+          key={theme.id}
+          className="inline-flex h-7 w-7 items-center justify-center text-zinc-500 transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50 cursor-pointer"
+          type="button"
+          aria-label={`Switch to ${theme.label} theme`}
+          data-id={theme.id}
+        >
+          {theme.icon}
+        </button>
         )
       })}
     </AnimatedBackground>
@@ -68,7 +68,17 @@ function ThemeSwitch() {
 export function Footer() {
   return (
     <footer className="mt-auto border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
-        <ThemeSwitch />
+      <ThemeSwitch />
+      <a
+        href="api/rss.xml"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 text-sm ml-8"
+        aria-label="Subscribe to RSS feed"
+      >
+        <RssIcon className="h-5 w-5 mr-1" />
+        RSS
+      </a>
     </footer>
   )
 }
