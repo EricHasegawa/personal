@@ -1,16 +1,19 @@
-import {ArticleHeader} from '@/components/ui/article-header'
-import {EmailSignup} from '@/components/ui/email-signup'
+import { ArticleHeader } from '@/components/ui/article-header';
+import { EmailSignup } from '@/components/ui/email-signup';
 
 export const metadata = {
   title: '10,000 Hours of Programming in the era of AI',
   description:
-    'Opinions I\'ve developed in writing lots of code over the past 3 or 4 years.',
+    "Opinions I've developed in writing lots of code over the past 3 or 4 years.",
   alternates: {
     canonical: '/writing/10k-hours',
   },
 };
 
-<ArticleHeader title="10,000 Hours of Programming in the era of AI" publishedDate="July 4th, 2025" />
+<ArticleHeader
+  title="10,000 Hours of Programming in the era of AI"
+  publishedDate="July 4th, 2025"
+/>
 
 I finished my last college exam in November of 2022, the same week ChatGPT was released.
 
@@ -19,11 +22,11 @@ right around the time the first usable versions of Cursor were coming out,
 and people were saying there would be no more programmers in six months.
 
 Ironically, that's when I really started to love programming, and
-I've logged over 10,000 hours* of technical work since then - some
+I've logged over 10,000 hours\* of technical work since then - some
 before the rise of AI coding tools, but overwhelmingly after.
 
-This article was heavily inspired by Matt Rickard's 2021 article 
-"[Reflections on 10,000 Hours of Programming]([https://mattrickard.com/reflections-on-10-000-hours-of-programming](https://mattrickard.com/reflections-on-10-000-hours-of-programming))".
+This article was heavily inspired by Matt Rickard's 2021 article
+"[Reflections on 10,000 Hours of Programming](https://mattrickard.com/reflections-on-10-000-hours-of-programming)".
 I wanted to write about what has made coming up as a developer over the past 3 years
 unique from prior generations; most notably, the impact that AI has had on how and what I've learned.
 
@@ -33,59 +36,60 @@ There's a lot more I could have included, and I've focused on the things I feel 
 strongly about, and especially the things I think should be talked about more. Being a
 software engineer in 2025 is hard. Here are some things I've learned that have made it a little easier.
 
-1. Everyone is lying about LLMs and what they are capable of. 
-This includes the LLMs themselves.
+1. Everyone is lying about LLMs and what they are capable of.
+   This includes the LLMs themselves.
 2. Language models do not make being a professional software engineer easier.
-In fact I find they make it harder - by making the easiest parts of our jobs trivial,
-they force us to spend time on the harder parts.
+   In fact I find they make it harder - by making the easiest parts of our jobs trivial,
+   they force us to spend time on the harder parts.
 3. If you are using AI intensively when coding, you need to be
-thinking and working harder. You may be moving faster, but you must
-resist the urge to put yourself on autopilot.
+   thinking and working harder. You may be moving faster, but you must
+   resist the urge to put yourself on autopilot.
 4. Vibe coding is inappropriate workplace behavior.
 5. Programmers can be notoriously lazy, and language models are no better - do
-not expect them to care about the quality of their work or spend time
-“thinking” about the best ways to solve a problem.
+   not expect them to care about the quality of their work or spend time
+   “thinking” about the best ways to solve a problem.
 6. Specifically, you must take care to avoid code churn.
-AI has a tendency to rewrite and change far more code than is
-necessary to get things done. As a rule of thumb, the best
-ways of doing things often result in the fewest lines changed.
+   AI has a tendency to rewrite and change far more code than is
+   necessary to get things done. As a rule of thumb, the best
+   ways of doing things often result in the fewest lines changed.
 7. LLMs leave **way** too many code comments.
 8. You own 100% of the code you author. It doesn't matter if an
-AI assisted you or wrote it all - by the time it evolves into a pull
-request, no one should be able to know.
+   AI assisted you or wrote it all - by the time it evolves into a pull
+   request, no one should be able to know.
 9. Publishing code with obvious blunders due to AI signifies a lack
-of ownership on your part, and you should be deeply embarrassed about this behavior.
+   of ownership on your part, and you should be deeply embarrassed about this behavior.
 10. It's easier than ever to skip going deep on technical problems,
-but more important than ever not to. Ten rounds of “it's still not working,
-try again” prompting will leave your codebase in a sorry state.
+    but more important than ever not to. Ten rounds of “it's still not working,
+    try again” prompting will leave your codebase in a sorry state.
 11. Reading code, be it yours or someone (or something) else's,
-is a skill that must be given at least as much effort as writing code.
+    is a skill that must be given at least as much effort as writing code.
 12. Unit tests should rarely be an afterthought. Tests represent your
-understanding of how code works and are the best source of documentation
-besides the code itself. It is common to have AI write your unit tests - do
-this with caution, as AI will not often challenge how your code works vs. how it should work.
+    understanding of how code works and are the best source of documentation
+    besides the code itself. It is common to have AI write your unit tests - do
+    this with caution, as AI will not often challenge how your code works vs. how it should work.
 13. The history and journey of a codebase is just as important as its current
-state; AI cannot, at this time, help you learn a codebase's history, you need to talk to people.
+    state; AI cannot, at this time, help you learn a codebase's history, you need to talk to people.
 14. Tribal knowledge and tenure are rare, extremely valuable, and not able to be adequately documented.
 15. Context is the most important currency of modern software engineering.
 16. LLMs are not good at telling you when they need more context, and will
-rarely ask for it. It is your job to provide it up front, and to recognize
-when an LLM is failing due to lack of context.
+    rarely ask for it. It is your job to provide it up front, and to recognize
+    when an LLM is failing due to lack of context.
 17. People who do not write code are not capable of evaluating how good AI is at writing code.
 18. LLMs decrease in value as companies increase in size, especially for engineers.
 19. Many AI products for software engineers are underpriced. It is in your best
-interest to try many options and incorporate several into your workflow. (update from July 6th: this pricing
-situation seems to be changing rapidly)
+    interest to try many options and incorporate several into your workflow. (update from July 6th: this pricing
+    situation seems to be changing rapidly)
 20. At large companies, the hard part is integrating your changes into a complex
-existing system. At startups, the challenge is making sure your changes actually
-add up to something valuable. Learning this startup engineering mentality makes
-you much more valuable at larger companies, but the reverse is not as true.
+    existing system. At startups, the challenge is making sure your changes actually
+    add up to something valuable. Learning this startup engineering mentality makes
+    you much more valuable at larger companies, but the reverse is not as true.
 21. Writing good design documents and planning projects becomes harder and more
-valuable as a business grows. This work still largely needs to be done “the old fashioned way”
-(i.e. largely without AI), since most of the information you need to design and lead new
-projects is deeply hidden between the codebase and the people who wrote it.
+    valuable as a business grows. This work still largely needs to be done “the old fashioned way”
+    (i.e. largely without AI), since most of the information you need to design and lead new
+    projects is deeply hidden between the codebase and the people who wrote it.
 
 #### What did I do for the 10,000 hours?
+
 Most of my technical work has been in TypeScript, Python, and Ruby.
 I've worked consistently in full-stack roles,
 contributing to projects ranging from change data capture pipelines
@@ -96,6 +100,7 @@ a founding engineer at Streamline Climate, and most recently as a full-stack dev
 at Stripe, where I lead a frontend team within the Disputes organization.
 
 #### Footnotes
+
 \*For those curious on the logistics of this timeline, I usually don't stick to a
 typical working schedule, and I tend to program and work seven days a week.
 This article isn't about the trade-offs of this approach, but the result has
