@@ -6,6 +6,17 @@ jest.mock('path', () => ({
 
 const mockSheetsAppend = jest.fn();
 
+process.env.GOOGLE_SERVICE_ACCOUNT_JSON = JSON.stringify({
+  type: 'service_account',
+  project_id: 'test-project',
+  private_key_id: 'test-key-id',
+  private_key: 'test-private-key',
+  client_email: 'test@test-project.iam.gserviceaccount.com',
+  client_id: 'test-client-id',
+  auth_uri: 'https://accounts.google.com/o/oauth2/auth',
+  token_uri: 'https://oauth2.googleapis.com/token',
+});
+
 jest.mock('googleapis', () => ({
   google: {
     auth: {

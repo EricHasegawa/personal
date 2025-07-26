@@ -5,10 +5,10 @@ import { cn } from '@/lib/utils';
 import { RefObject } from 'react';
 
 export type ScrollProgressProps = {
-  className?: string
-  springOptions?: SpringOptions
-  containerRef?: RefObject<HTMLDivElement>
-}
+  className?: string;
+  springOptions?: SpringOptions;
+  containerRef?: RefObject<HTMLDivElement>;
+};
 
 const DEFAULT_SPRING_OPTIONS: SpringOptions = {
   stiffness: 200,

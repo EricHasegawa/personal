@@ -11,12 +11,12 @@ import {
 const SPRING_CONFIG = { stiffness: 26.7, damping: 4.1, mass: 0.2 };
 
 export type MagneticProps = {
-  children: React.ReactNode
-  intensity?: number
-  range?: number
-  actionArea?: 'self' | 'parent' | 'global'
-  springOptions?: SpringOptions
-}
+  children: React.ReactNode;
+  intensity?: number;
+  range?: number;
+  actionArea?: 'self' | 'parent' | 'global';
+  springOptions?: SpringOptions;
+};
 
 export function Magnetic({
   children,

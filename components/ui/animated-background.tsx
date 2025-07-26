@@ -13,13 +13,13 @@ import {
 export type AnimatedBackgroundProps = {
   children:
     | ReactElement<{ 'data-id': string }>[]
-    | ReactElement<{ 'data-id': string }>
-  defaultValue?: string
-  onValueChange?: (newActiveId: string | null) => void
-  className?: string
-  transition?: Transition
-  enableHover?: boolean
-}
+    | ReactElement<{ 'data-id': string }>;
+  defaultValue?: string;
+  onValueChange?: (newActiveId: string | null) => void;
+  className?: string;
+  transition?: Transition;
+  enableHover?: boolean;
+};
 
 export function AnimatedBackground({
   children,
@@ -52,12 +52,12 @@ export function AnimatedBackground({
 
     const interactionProps = enableHover
       ? {
-        onMouseEnter: () => handleSetActiveId(id),
-        onMouseLeave: () => handleSetActiveId(null),
-      }
+          onMouseEnter: () => handleSetActiveId(id),
+          onMouseLeave: () => handleSetActiveId(null),
+        }
       : {
-        onClick: () => handleSetActiveId(id),
-      };
+          onClick: () => handleSetActiveId(id),
+        };
 
     return cloneElement(
       child,
