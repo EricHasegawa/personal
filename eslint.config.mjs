@@ -3,6 +3,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import pluginNext from '@next/eslint-plugin-next';
+import prettierConfig from 'eslint-config-prettier';
 
 export default [
   {
@@ -51,11 +52,9 @@ export default [
   },
   {
     rules: {
-      // Semicolon rules
       semi: ['error', 'always'],
       'semi-spacing': ['error', { before: false, after: true }],
 
-      // Code quality rules
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
@@ -72,12 +71,6 @@ export default [
       'react/jsx-uses-react': 'off',
       'react/jsx-uses-vars': 'error',
 
-      // General formatting and quality
-      quotes: ['error', 'single', { avoidEscape: true }],
-      indent: ['error', 2],
-      'comma-dangle': ['error', 'always-multiline'],
-      'object-curly-spacing': ['error', 'always'],
-      'array-bracket-spacing': ['error', 'never'],
       'no-trailing-spaces': 'error',
       'no-multiple-empty-lines': ['error', { max: 1 }],
       'eol-last': 'error',
@@ -107,4 +100,5 @@ export default [
       },
     },
   },
+  prettierConfig,
 ];
