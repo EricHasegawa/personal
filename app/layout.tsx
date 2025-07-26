@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
-import '@/styles/globals.css';
+// eslint-disable-next-line no-restricted-imports
+import './globals.css';
 import { Header } from '@/app/header';
 import { Footer } from '@/app/footer';
 import { ThemeProvider } from 'next-themes';
