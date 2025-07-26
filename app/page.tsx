@@ -3,11 +3,7 @@ import { motion } from 'motion/react';
 import { Magnetic } from '@/components/ui/magnetic';
 import Link from 'next/link';
 import { AnimatedBackground } from '@/components/ui/animated-background';
-import {
-  BLOG_POSTS,
-  EMAIL,
-  SOCIAL_LINKS,
-} from '@/app/data';
+import { BLOG_POSTS, EMAIL, SOCIAL_LINKS } from '@/app/data';
 import { EmailSignup } from '@/components/ui/email-signup';
 
 const VARIANTS_CONTAINER = {
@@ -33,8 +29,8 @@ function MagneticSocialLink({
   children,
   link,
 }: {
-  children: React.ReactNode
-  link: string
+  children: React.ReactNode;
+  link: string;
 }) {
   return (
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
@@ -66,8 +62,7 @@ function MagneticSocialLink({
 export default function Personal() {
   return (
     <motion.main
-      className="flex flex-1 flex-col min-h-[inherit] gap-18"
-
+      className="flex min-h-[inherit] flex-1 flex-col gap-18"
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
@@ -75,35 +70,36 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        data-testid="introduction-section"
       >
         <p className="text-zinc-600 dark:text-zinc-400">
-            I&apos;m a founder and engineer currently working at Stripe in New York City.
-            Previously, I was a founding engineer at
-          {' '}
+          I&apos;m a founder and engineer currently working at Stripe in New
+          York City. Previously, I was a founding engineer at{' '}
           <Link
             href="https://streamlineclimate.com/"
             className="underline dark:text-zinc-300"
             target="_blank"
             rel="noopener noreferrer"
           >
-              Streamline Climate
-          </Link>, and prior to that I co-founded
-          {' '}
+            Streamline Climate
+          </Link>
+          , and prior to that I co-founded{' '}
           <Link
             href="https://www.linkedin.com/company/68071523/"
             className="underline dark:text-zinc-300"
             target="_blank"
             rel="noopener noreferrer"
           >
-              Sanctuary
-          </Link>, a data platform for the sneaker industry that was acquired in 2024.
-
+            Sanctuary
+          </Link>
+          , a data platform for the sneaker industry that was acquired in 2024.
         </p>
       </motion.section>
 
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        data-testid="writing-section"
       >
         <h3 className="mb-3 font-medium">Writing</h3>
         <div className="flex flex-col space-y-0">
@@ -135,7 +131,7 @@ export default function Personal() {
             ))}
           </AnimatedBackground>
         </div>
-        <div className='mt-4'>
+        <div className="mt-4">
           <EmailSignup />
         </div>
       </motion.section>
@@ -144,6 +140,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
         className="mt-auto mb-8"
+        data-testid="connect-section"
       >
         <h3 className="mb-5 font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">

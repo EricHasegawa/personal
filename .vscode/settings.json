@@ -17,4 +17,4 @@
     "*.tsx": "typescriptreact",
     "*.ts": "typescript"
   }
-} 
+}
