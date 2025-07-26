@@ -40,3 +40,5 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const EMAIL = 'erichasegawa1@gmail.com';
+
+// testing codecov
