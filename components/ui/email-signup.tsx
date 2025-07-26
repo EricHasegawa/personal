@@ -12,7 +12,9 @@ export const EmailSignup = () => {
   const [status, setStatus] = useState<ResponseStatus | null>(null);
   const [saving, setSaving] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>,
+  ): Promise<void> => {
     e.preventDefault();
     if (saving) return;
 
@@ -36,22 +38,24 @@ export const EmailSignup = () => {
   };
 
   return (
-    <div className="flex flex-col w-full">
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+    <div className="flex w-full flex-col">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2 sm:flex-row">
         <input
           type="email"
           placeholder="you@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="border border-gray-300 rounded px-4 py-2 w-full"
+          className="w-full rounded border border-gray-300 px-4 py-2"
           disabled={saving}
         />
         <button
           type="submit"
           disabled={saving}
-          className={`px-4 py-2 rounded text-white transition-colors min-w-[140px] ${
-            saving ? 'bg-gray-400 cursor-not-allowed' : 'bg-black hover:bg-gray-800 cursor-pointer'
+          className={`min-w-[140px] rounded px-4 py-2 text-white transition-colors ${
+            saving
+              ? 'cursor-not-allowed bg-gray-400'
+              : 'cursor-pointer bg-black hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200'
           }`}
         >
           {saving ? 'Subscribing…' : 'Subscribe'}
