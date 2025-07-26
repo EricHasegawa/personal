@@ -2,9 +2,8 @@ import { NextResponse } from 'next/server';
 import { BLOG_POSTS } from '@/app/data';
 
 const buildRSSFeed = () => {
-  const rssItems = BLOG_POSTS
-    .map(
-      ({ title, fullUrl, description, pubDate, uid }) => `
+  const rssItems = BLOG_POSTS.map(
+    ({ title, fullUrl, description, pubDate, uid }) => `
     <item>
       <title>${title}</title>
       <link>${fullUrl}</link>
@@ -12,8 +11,7 @@ const buildRSSFeed = () => {
       <pubDate>${pubDate}</pubDate>
       <guid>${uid}</guid>
     </item>`,
-    )
-    .join('');
+  ).join('');
 
   return `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
