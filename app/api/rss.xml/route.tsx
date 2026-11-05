@@ -16,8 +16,8 @@ const buildRSSFeed = () => {
   return `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
-    <title>Root Fn</title>
-    <link>https://rootfn.com</link>
+    <title>Eric Hasegawa</title>
+    <link>https://erichasegawa.com</link>
     <description>Latest articles</description>
     ${rssItems}
   </channel>

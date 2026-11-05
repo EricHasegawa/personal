@@ -3,33 +3,21 @@ import { render, screen } from '@/lib/test/test-utils';
 import { Header } from '@/app/header';
 
 describe('Header Component', () => {
-  it('renders the site title and description', () => {
+  it('renders the site title and byline', () => {
     render(<Header />);
 
-    const titleLink = screen.getByRole('link', { name: /root function/i });
+    const titleLink = screen.getByRole('link', {
+      name: /thoughts and writings/i,
+    });
     expect(titleLink).toBeInTheDocument();
     expect(titleLink).toHaveAttribute('href', '/');
-
-    const description = screen.getByText(
-      /eric hasegawa's thoughts and writings/i,
-    );
-    expect(description).toBeInTheDocument();
+    expect(screen.getByText('Eric Hasegawa')).toBeInTheDocument();
   });
 
   it('has proper semantic HTML structure', () => {
     render(<Header />);
 
-    const header = screen.getByRole('banner');
-    expect(header).toBeInTheDocument();
-
-    const titleLink = screen.getByRole('link');
-    expect(titleLink).toBeInTheDocument();
-  });
-
-  it('renders correctly with theme provider', () => {
-    render(<Header />);
-
-    expect(screen.getByText('Root Function')).toBeInTheDocument();
-    expect(screen.getByText(/thoughts and writings/i)).toBeInTheDocument();
+    expect(screen.getByRole('banner')).toBeInTheDocument();
+    expect(screen.getByRole('link')).toHaveAttribute('href', '/');
   });
 });

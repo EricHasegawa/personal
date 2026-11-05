@@ -8,28 +8,28 @@ describe('RootLayout Component', () => {
   describe('Metadata Exports', () => {
     it('exports correct metadata configuration', () => {
       expect(metadata).toEqual({
-        metadataBase: new URL('https://nim-fawn.vercel.app/'),
+        metadataBase: new URL('https://erichasegawa.com/'),
         alternates: {
           canonical: '/',
         },
         title: {
-          default: 'Rootfn',
-          template: '%s | Rootfn',
+          default: 'Eric Hasegawa',
+          template: '%s | Eric Hasegawa',
         },
-        description: "Rootfn is Eric Hasegawa's personal website.",
+        description: "Eric Hasegawa's personal website.",
       });
     });
 
     it('has correct metadata base URL', () => {
       expect(metadata.metadataBase?.toString()).toBe(
-        'https://nim-fawn.vercel.app/',
+        'https://erichasegawa.com/',
       );
     });
 
     it('has correct title template format', () => {
       const title = metadata.title as { template: string; default: string };
-      expect(title?.template).toBe('%s | Rootfn');
-      expect(title?.default).toBe('Rootfn');
+      expect(title?.template).toBe('%s | Eric Hasegawa');
+      expect(title?.default).toBe('Eric Hasegawa');
     });
   });
 
@@ -49,7 +49,7 @@ describe('RootLayout Component', () => {
         'link[type="application/rss+xml"]',
       );
       expect(rssLink).toBeInTheDocument();
-      expect(rssLink?.getAttribute('title')).toBe('Root Fn RSS Feed');
+      expect(rssLink?.getAttribute('title')).toBe('Eric Hasegawa RSS Feed');
       expect(rssLink?.getAttribute('href')).toBe('api/rss.xml');
     });
 

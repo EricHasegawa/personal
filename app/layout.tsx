@@ -13,15 +13,15 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nim-fawn.vercel.app/'),
+  metadataBase: new URL('https://erichasegawa.com/'),
   alternates: {
     canonical: '/',
   },
   title: {
-    default: 'Rootfn',
-    template: '%s | Rootfn',
+    default: 'Eric Hasegawa',
+    template: '%s | Eric Hasegawa',
   },
-  description: "Rootfn is Eric Hasegawa's personal website.",
+  description: "Eric Hasegawa's personal website.",
 };
 
 const jetbrainsMono = JetBrains_Mono({
@@ -41,7 +41,7 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="Root Fn RSS Feed"
+          title="Eric Hasegawa RSS Feed"
           href="api/rss.xml"
         />
       </head>
@@ -55,7 +55,7 @@ export default function RootLayout({
           defaultTheme="system"
         >
           <div className="flex min-h-screen w-full flex-col">
-            <div className="relative mx-auto flex w-full max-w-screen-md flex-1 flex-col px-4 pt-6">
+            <div className="relative mx-auto flex w-full max-w-screen-md flex-1 flex-col px-4 pt-8 sm:pt-10">
               <Header />
               {children}
               <Footer />
