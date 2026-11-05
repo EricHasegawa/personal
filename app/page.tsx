@@ -94,7 +94,8 @@ export default function Personal() {
             Streamline
           </Link>
           , an AI-native grant writing company that was acquired in 2025. After
-          that I spent time in New York working at Stripe.
+          that I spent time in New York working at Stripe before moving back to
+          the Bay to join xAI.
         </p>
       </motion.section>
 
