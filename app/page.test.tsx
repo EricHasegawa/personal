@@ -75,7 +75,7 @@ describe('Personal Page Component', () => {
 
       expect(
         screen.getByText(
-          /I'm a founder and engineer currently working at Stripe/i,
+          /I'm a founder and engineer working on model training at SpaceX Super Intelligence/i,
         ),
       ).toBeInTheDocument();
     });
@@ -84,7 +84,7 @@ describe('Personal Page Component', () => {
       render(<Personal />);
 
       const streamlineLink = screen.getByRole('link', {
-        name: /Streamline Climate/i,
+        name: /^Streamline$/i,
       });
       expect(streamlineLink).toBeInTheDocument();
       expect(streamlineLink).toHaveAttribute(
