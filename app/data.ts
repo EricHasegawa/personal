@@ -18,7 +18,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       "Opinions I've developed in writing lots of code over the past 3 or 4 years.",
     link: '/writing/10k-hours',
-    fullUrl: 'https://rootfn.com/writing/10k-hours',
+    fullUrl: 'https://erichasegawa.com/writing/10k-hours',
     pubDate: new Date('2025-07-04').toUTCString(),
     uid: '73aa6c72-7705-445a-a62a-e408b64e18c8',
   },
