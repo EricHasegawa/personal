@@ -73,26 +73,28 @@ export default function Personal() {
         data-testid="introduction-section"
       >
         <p className="text-zinc-600 dark:text-zinc-400">
-          I&apos;m a founder and engineer currently working at Stripe in New
-          York City. Previously, I was a founding engineer at{' '}
-          <Link
-            href="https://streamlineclimate.com/"
-            className="underline dark:text-zinc-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Streamline Climate
-          </Link>
-          , and prior to that I co-founded{' '}
+          I&apos;m a founder and engineer working on model training at SpaceX
+          Super Intelligence (xAI). Prior to this I helped build two companies:{' '}
           <Link
             href="https://www.linkedin.com/company/68071523/"
             className="underline dark:text-zinc-300"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Sanctuary
+            Sanctuary Sneakers
           </Link>
-          , a data platform for the sneaker industry that was acquired in 2024.
+          , a data platform for the sneaker industry that was acquired in 2024,
+          then{' '}
+          <Link
+            href="https://streamlineclimate.com/"
+            className="underline dark:text-zinc-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Streamline
+          </Link>
+          , an AI-native grant writing company that was acquired in 2025. After
+          that I spent time in New York working at Stripe.
         </p>
       </motion.section>
 
